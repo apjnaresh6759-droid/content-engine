@@ -1,7 +1,6 @@
 import os, requests, xml.etree.ElementTree as ET, textwrap
 from PIL import Image, ImageDraw
 
-# బాట్ వివరాలు నేరుగా ఇక్కడ సెట్ చేయబడ్డాయి
 BOT_TOKEN = "8883331177:AAEb1G8mukceWlsG4-HDpfU9p1tDDCjZEag"
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
