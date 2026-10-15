@@ -53,8 +53,7 @@ def generate_poster(title, img_url, out_path="poster.png"):
 
 def send_to_telegram(title, desc, link, poster_path):
     caption = f"🚀 *{title}*\n\n{desc[:300]}...\n\n🔗 [మరిన్ని వివరాలు]({link})"
-    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendPhoto"
-    
+  url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendPhoto" 
     with open(poster_path, "rb") as photo:
         payload = {
             "chat_id": CHAT_ID,
