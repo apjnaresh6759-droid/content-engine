@@ -1,7 +1,8 @@
 import os, requests, xml.etree.ElementTree as ET, textwrap
 from PIL import Image, ImageDraw
 
-BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+# బాట్ వివరాలు నేరుగా ఇక్కడ సెట్ చేయబడ్డాయి
+BOT_TOKEN = "8883331177:AAEb1G8mukceWlsG4-HDpfU9p1tDDCjZEag"
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
 def fetch_latest_space_news():
@@ -63,6 +64,7 @@ def send_to_telegram(title, desc, link, poster_path):
         }
         r = requests.post(url, data=payload, files={"photo": photo})
         print(f"Telegram Status: {r.status_code}")
+        print(f"Telegram Response: {r.text}")
 
 def main():
     title, desc, link, img_url = fetch_latest_space_news()
